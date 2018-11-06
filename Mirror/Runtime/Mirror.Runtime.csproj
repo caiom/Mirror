@@ -82,6 +82,33 @@
     <Compile Include="NetworkManagerHUD.cs" />
     <Compile Include="NetworkBehaviour.cs" />
     <Compile Include="NetworkIdentity.cs" />
+    <Compile Include="Transport\LiteNetLib\BaseChannel.cs" />
+    <Compile Include="Transport\LiteNetLib\ConnectionRequest.cs" />
+    <Compile Include="Transport\LiteNetLib\Ntp\NtpPacket.cs" />
+    <Compile Include="Transport\LiteNetLib\Ntp\NtpRequest.cs" />
+    <Compile Include="Transport\LiteNetLib\Utils\FastBitConverter.cs" />
+    <Compile Include="Transport\LiteNetLib\INetEventListener.cs" />
+    <Compile Include="Transport\LiteNetLib\Utils\INetSerializable.cs" />
+    <Compile Include="Transport\LiteNetLib\NatPunchModule.cs" />
+    <Compile Include="Transport\LiteNetLib\NetConstants.cs" />
+    <Compile Include="Transport\LiteNetLib\Utils\NetDataReader.cs" />
+    <Compile Include="Transport\LiteNetLib\Utils\NetDataWriter.cs" />
+    <Compile Include="Transport\LiteNetLib\NetDebug.cs" />
+    <Compile Include="Transport\LiteNetLib\NetExceptions.cs" />
+    <Compile Include="Transport\LiteNetLib\NetManager.cs" />
+    <Compile Include="Transport\LiteNetLib\NetPacket.cs" />
+    <Compile Include="Transport\LiteNetLib\NetPacketPool.cs" />
+    <Compile Include="Transport\LiteNetLib\Utils\NetPacketProcessor.cs" />
+    <Compile Include="Transport\LiteNetLib\NetPeer.cs" />
+    <Compile Include="Transport\LiteNetLib\Utils\NetSerializer.cs" />
+    <Compile Include="Transport\LiteNetLib\Utils\NetSerializerExceptions.cs" />
+    <Compile Include="Transport\LiteNetLib\NetSocket.cs" />
+    <Compile Include="Transport\LiteNetLib\NetStatistics.cs" />
+    <Compile Include="Transport\LiteNetLib\NetUtils.cs" />
+    <Compile Include="Transport\LiteNetLib\ReliableChannel.cs" />
+    <Compile Include="Transport\LiteNetLib\SequencedChannel.cs" />
+    <Compile Include="Transport\LiteNetLib\SimpleChannel.cs" />
+    <Compile Include="Transport\LiteNetTransport.cs" />
     <Compile Include="Transport\LLAPITransport.cs" />
     <Compile Include="Transport\TelepathyTransport.cs" />
     <Compile Include="Transport\TelepathyWebsocketsMultiplexTransport.cs" />
@@ -98,6 +125,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="AfterBuild" DependsOnTargets="AfterBuildEditor;AfterBuildStandalone">
     <Copy SourceFiles="$(TargetDir)Telepathy.dll" DestinationFiles="$(ProjectDir)..\Output\Telepathy.dll" />
