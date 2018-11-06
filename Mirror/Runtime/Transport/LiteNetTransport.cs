@@ -374,7 +374,8 @@ namespace Mirror
 
         public void Shutdown()
         {
-            _netManager.Stop();
+            if (_netManager != null)
+                _netManager.Stop();
             _netManager = null;
             _listener = null;
             _isActive = false;
